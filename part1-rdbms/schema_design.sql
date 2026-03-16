@@ -1,4 +1,3 @@
-use orders;
 -- Customers Table
 CREATE TABLE tbl_customers (
 customer_id VARCHAR(50) PRIMARY KEY,
