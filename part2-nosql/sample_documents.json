@@ -1,0 +1,47 @@
+{
+  "_id": 4,
+  "name": "Samsung 55-inch Smart TV",
+  "category": "Electronics",
+  "price": 55000,
+  "specs": {
+    "warranty_years": 2,
+    "voltage": "220V",
+    "features": ["4K UHD", "HDR10+", "Smart Apps"
+  },
+  "availability": {
+    "in_stock": true,
+    "warehouse_location": "Mumbai"
+  }
+}
+{
+  "_id": 5,
+  "name": "Levi's Denim Jacket",
+  "category": "Clothing",
+  "price": 4500,
+  "attributes": {
+    "size": ["S", "M", "L", "XL"],
+    "color": "Blue",
+    "material": "Denim"
+  },
+  "care_instructions": [
+    "Machine wash cold",
+    "Do not bleach",
+    "Iron at medium temperature"
+  ]
+}
+{
+  "_id": 6,
+  "name": "Amul Butter 500g",
+  "category": "Groceries",
+  "price": 250,
+  "nutrition": {
+    "calories": 717,
+    "fat": "81g",
+    "protein": "1g"
+  },
+  "expiry_date": "2024-08-15",
+  "storage": {
+    "temperature": "Refrigerated",
+    "shelf_life_days": 180
+  }
+}
