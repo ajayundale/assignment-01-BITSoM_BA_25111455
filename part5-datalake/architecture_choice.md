@@ -1,5 +1,5 @@
-### ## Architecture Recommendation
-
+### Architecture Recommendation
+---
 For a fast-growing food delivery startup managing everything from *GPS logs and text reviews to payment data and menu images*, a **Data Lakehouse** is the most strategic choice and a strong fit. It combines the flexibility of a data lake with the structured querying power of a data warehouse, making it ideal for this scenario.  
 
 1. **Handling Diverse Data Types**: The startup works with structured data (payments, transactions), semi-structured data (GPS logs, reviews), and unstructured data (images). A lakehouse can store and process all of these natively, unlike traditional warehouses that struggle with unstructured formats.
