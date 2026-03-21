@@ -1,15 +1,15 @@
 ## Storage Systems
 
-Predicting Readmission Risk (Goal 1):
+### Predicting Readmission Risk (Goal 1):
 Patient records and treatment histories are stored in a **relational transactional database (*OLTP*)**. These systems are well-suited for structured medical data, ensure reliability through ACID transactions, and integrate easily with machine learning workflows. However, because training models on a live production database is a recipe for performance lag, we move historical data into a high-performance data warehouse. This allows the AI to crunch massive datasets without slowing down the doctors currently treating patients.
 
-Doctor Queries in Plain English (Goal 2):
+### Doctor Queries in Plain English (Goal 2):
 To let doctors ask questions in plain English, while the raw records stay in our relational database, we use a **Vector Database** to store **"embeddings"**. This allows a semantic search layer to translate a doctor’s request into the right medical context instantly.
 
-Monthly Reports for Management (Goal 3):
+### Monthly Reports for Management (Goal 3):
 A data warehouse (*OLAP system*) is the backbone here. ETL pipelines (Extract, Transform, Load) move data from transactional systems into the warehouse, where it is aggregated and optimized for reporting. Reporting Tools connect directly to the warehouse to generate department-wise costs, occupancy rates, and other KPIs.
 
-Storing and Streaming real-time Vitals (Goal 4):
+### Storing and Streaming real-time Vitals (Goal 4):
 A time-series database is ideal for storing continuous vitals like heart rate, oxygen saturation, and blood pressure received from ICU monitoring devices. These databases are optimized for *high-velocity data ingestion* rates and real-time queries.
 
 
@@ -26,8 +26,10 @@ Once data enters the data warehouse, it becomes part of the OLAP domain. Here, q
 
 ## Trade-offs
 A major trade-off is real-time vs batch processing:
-- Challenge: ICU vitals demand real-time ingestion and alerting, while management reports and predictive models rely on batch-processed, cleaned data. Balancing both can strain infrastructure if not carefully designed.
-- Mitigation:
+### Challenge: 
+ICU vitals demand real-time ingestion and alerting, while management reports and predictive models rely on batch-processed, cleaned data. Balancing both can strain infrastructure if not carefully designed.
+
+### Mitigation:
 1. Use separate specialized storage systems (time-series DB for real-time, warehouse for batch analytics). 
 2. Introduce data lake storage as a staging area, allowing both real-time streams and batch pipelines to coexist without bottlenecks.
 
