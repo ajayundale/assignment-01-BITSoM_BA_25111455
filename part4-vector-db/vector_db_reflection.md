@@ -1,5 +1,5 @@
 ## Vector DB Use Case
-
+---
 ### From Keywords to Context
 
 The traditional approach to document retrieval—**keyword-based search**—often falls short in the legal domain. Law firms manage large, dense contracts where key clauses can be expressed using a wide range of terminology. For instance, a termination clause might appear as “cessation of agreement,” “contract dissolution,” or “end of service.” As keyword search relies on literal string matching, a lawyer must guess the exact phrasing used by the original author. This not only reduces efficiency but also increases the risk of missing critical information.
