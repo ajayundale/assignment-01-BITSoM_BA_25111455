@@ -1,4 +1,4 @@
-## ## Vector DB Use Case
+## Vector DB Use Case
 
 ### From Keywords to Context
 
